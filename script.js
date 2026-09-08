@@ -2,6 +2,17 @@ const themeToggle = document.getElementById('themeToggle');
 const menuToggle = document.getElementById('menuToggle');
 const nav = document.querySelector('.desktop-nav');
 
+// Add Home to the header navigation on every page.
+if (nav && !nav.querySelector('a[href="index.html"]')) {
+  const homeLink = document.createElement('a');
+  homeLink.href = 'index.html';
+  homeLink.textContent = 'Home';
+  if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/index.html')) {
+    homeLink.setAttribute('aria-current', 'page');
+  }
+  nav.insertBefore(homeLink, nav.firstChild);
+}
+
 const savedTheme = localStorage.getItem('odrs-theme');
 if (savedTheme === 'dark') document.body.classList.add('dark');
 
