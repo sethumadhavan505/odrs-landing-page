@@ -7,18 +7,26 @@ if (nav && !nav.querySelector('a[href="index.html"]')) {
   const homeLink = document.createElement('a');
   homeLink.href = 'index.html';
   homeLink.textContent = 'Home';
-  if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/index.html')) {
-    homeLink.setAttribute('aria-current', 'page');
-  }
   nav.insertBefore(homeLink, nav.firstChild);
 }
 
-// Highlight the current page with a red underline.
+// Automatically highlight the page that is currently open.
 if (nav) {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.removeAttribute('aria-current');
+
+    const linkPage = link.getAttribute('href').split('/').pop();
+    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+
   const activeStyle = document.createElement('style');
   activeStyle.textContent = `
     .desktop-nav a[aria-current="page"] {
-      color: var(--red);
+      color: var(--red) !important;
       position: relative;
     }
     .desktop-nav a[aria-current="page"]::after {
