@@ -647,7 +647,7 @@ em {
 .benefit {
   display: flex;
   gap: 22px;
-  padding: 19px 0;
+  padding: 19px 0;f
   border-top: 1px solid var(--line);
 }
 
@@ -812,7 +812,7 @@ em {
 
 .copyright {
   grid-column: 1 / -1;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
   padding-top: 20px;
   margin: 0;
   color: #718594;
