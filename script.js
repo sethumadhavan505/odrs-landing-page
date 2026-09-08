@@ -13,6 +13,12 @@ if (nav && !nav.querySelector('a[href="index.html"]')) {
   nav.insertBefore(homeLink, nav.firstChild);
 }
 
+// Send every Login button to the external ODRS login/signup application.
+document.querySelectorAll('a[href="login.html"]').forEach(link => {
+  link.href = 'https://odrs-company-io.vercel.app/';
+  link.target = '_self';
+});
+
 const savedTheme = localStorage.getItem('odrs-theme');
 if (savedTheme === 'dark') document.body.classList.add('dark');
 
