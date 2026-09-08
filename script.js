@@ -13,6 +13,28 @@ if (nav && !nav.querySelector('a[href="index.html"]')) {
   nav.insertBefore(homeLink, nav.firstChild);
 }
 
+// Highlight the current page with a red underline.
+if (nav) {
+  const activeStyle = document.createElement('style');
+  activeStyle.textContent = `
+    .desktop-nav a[aria-current="page"] {
+      color: var(--red);
+      position: relative;
+    }
+    .desktop-nav a[aria-current="page"]::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--red);
+    }
+  `;
+  document.head.appendChild(activeStyle);
+}
+
 // Send every Login button to the external ODRS login/signup application.
 document.querySelectorAll('a[href="login.html"]').forEach(link => {
   link.href = 'https://odrs-company-io.vercel.app/';
