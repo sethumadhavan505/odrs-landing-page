@@ -583,39 +583,11 @@ em {
   justify-content: center;
 }
 
-.why-ring {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  border: 1px solid #dfe5eb;
-  box-shadow:
-    inset 0 0 0 28px #f7f9fc,
-    inset 0 0 0 29px #e8edf2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--navy);
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: -3px;
-}
-
-.why-ring:before,
-.why-ring:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 1px dashed #dce3e9;
-}
-
-.why-ring:before {
+.why-logo {
   width: 390px;
   height: 390px;
-}
-
-.why-ring:after {
-  width: 250px;
-  height: 250px;
+  object-fit: contain;
+  display: block;
 }
 
 .why-badge {
@@ -1049,10 +1021,9 @@ body.dark .theme-toggle:after {
     min-height: 350px;
   }
 
-  .why-ring {
-    width: 240px;
-    height: 240px;
-    font-size: 31px;
+  .why-logo {
+    width: 280px;
+    height: 280px;
   }
 
   .why-ring:before {
