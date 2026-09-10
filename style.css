@@ -646,7 +646,7 @@ em {
 .benefit {
   display: flex;
   gap: 22px;
-  padding: 19px 0;f
+  padding: 19px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -1052,20 +1052,20 @@ body.dark .theme-toggle:after {
     width: 280px;
     height: 280px;
   }
-
-  .why-ring:before {
-    width: 290px;
-    height: 290px;
-  }
-
-  .why-ring:after {
-    width: 190px;
-    height: 190px;
-  }
-
+  
   .why-badge {
-    right: 2%;
-    bottom: 20px;
+    right: 0;
+    bottom: 15px;
+    padding: 8px 16px 10px;
+  }
+
+  .why-badge small {
+    font-size: 9px;
+    padding: 4px 12px;
+  }
+
+  .why-badge strong {
+    font-size: 15px;
   }
 
   .steps {
