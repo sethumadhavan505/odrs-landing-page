@@ -592,21 +592,48 @@ em {
 
 .why-badge {
   position: absolute;
-  right: 9%;
-  bottom: 52px;
-  padding: 18px 22px;
-  border-radius: 15px;
+  right: 3%;
+  bottom: 45px;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px 22px 12px;
+  border-radius: 8px;
+
   background: var(--red);
   color: #fff;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.05;
-  box-shadow: 0 15px 30px rgba(255, 59, 48, 0.25);
+
+  transform: rotate(-6deg);
+
+  box-shadow: 0 14px 28px rgba(255, 59, 48, 0.28);
 }
 
+/* ONE DAY */
 .why-badge small {
-  font-size: 8px;
-  letter-spacing: 1.3px;
+  background: #fff;
+  color: var(--navy);
+
+  padding: 5px 18px;
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  margin-bottom: 3px;
+
+  transform: rotate(2deg);
+}
+
+/* ONE SOLUTION */
+.why-badge strong {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
 .why-copy > p {
