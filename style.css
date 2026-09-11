@@ -85,19 +85,48 @@ button {
   gap: 13px;
 }
 
-.theme-toggle,
+.theme-toggle {
+  width: 58px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  background: #cbd5e1;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
 .menu-toggle {
   border: 0;
   background: transparent;
   cursor: pointer;
 }
 
-.theme-toggle {
-  width: 40px;
-  height: 40px;
+/* Moon / Sun icon */
+.theme-toggle::before {
+  content: "☾";
+  position: absolute;
+  left: -27px;
+  top: 3px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #64748b;
+}
+
+/* White switch circle */
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 3px;
+  right: 3px;
   border-radius: 50%;
-  font-size: 21px;
-  color: #526174;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
 .menu-toggle {
@@ -882,17 +911,17 @@ body.dark .why {
   background: #0b1d2b;
 }
 
-.theme-toggle {
-  font-size: 0;
+body.dark .theme-toggle {
+  background: #334155;
 }
 
-.theme-toggle:after {
-  content: "☾";
-  font-size: 20px;
-}
-
-body.dark .theme-toggle:after {
+body.dark .theme-toggle::before {
   content: "☀";
+  color: #facc15;
+}
+
+body.dark .theme-toggle::after {
+  transform: translateX(-28px);
 }
 
 /* =========================
