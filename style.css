@@ -85,49 +85,13 @@ button {
   gap: 13px;
 }
 
-.theme-toggle {
-  width: 58px;
-  height: 30px;
-  padding: 0;
-  border: 0;
-  border-radius: 20px;
-  background: #cbd5e1;
-  position: relative;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  flex-shrink: 0;
-}
-
 .menu-toggle {
   border: 0;
   background: transparent;
   cursor: pointer;
 }
 
-/* Moon / Sun icon */
-.theme-toggle::before {
-  content: "☾";
-  position: absolute;
-  left: -27px;
-  top: 3px;
-  font-size: 20px;
-  line-height: 24px;
-  color: #64748b;
-}
 
-/* White switch circle */
-.theme-toggle::after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 3px;
-  right: 3px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
 
 .menu-toggle {
   display: none;
@@ -915,11 +879,13 @@ body.dark .theme-toggle {
   background: #334155;
 }
 
+/* Change moon → sun */
 body.dark .theme-toggle::before {
   content: "☀";
   color: #facc15;
 }
 
+/* Move white circle LEFT */
 body.dark .theme-toggle::after {
   transform: translateX(-28px);
 }
@@ -1121,4 +1087,58 @@ body.dark .theme-toggle::after {
   .hero-buttons {
     flex-wrap: wrap;
   }
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+  width: 58px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 30px;
+  background: #cbd5e1;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Moon / Sun icon on the LEFT */
+.theme-toggle::before {
+  content: "☾";
+  position: absolute;
+  left: -27px;
+  top: 2px;
+  width: 24px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 21px;
+  line-height: 1;
+  color: #64748b;
+}
+
+/* White switch circle */
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 3px;
+  right: 3px;
+
+  border-radius: 50%;
+  background: #ffffff;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
