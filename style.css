@@ -63,9 +63,9 @@ button {
 
 .desktop-nav {
   display: flex;
-  gap: 34px;
+  gap: 24px;
   margin-left: auto;
-  margin-right: 35px;
+  margin-right: 20px;
 }
 
 .desktop-nav a {
@@ -82,7 +82,7 @@ button {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 9px;
 }
 
 .menu-toggle {
@@ -128,7 +128,7 @@ button {
 }
 
 .btn-small {
-  padding: 10px 17px;
+  padding: 9px 15px;
 }
 
 .btn-ghost {
@@ -877,8 +877,8 @@ body.dark .why {
 
 @media (max-width: 1000px) {
   .desktop-nav {
-    gap: 18px;
-    margin-right: 15px;
+    gap: 14px;
+    margin-right: 10px;
   }
 
   .hero {
