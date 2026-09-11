@@ -875,21 +875,6 @@ body.dark .why {
   background: #0b1d2b;
 }
 
-body.dark .theme-toggle {
-  background: #334155;
-}
-
-/* Change moon → sun */
-body.dark .theme-toggle::before {
-  content: "☀";
-  color: #facc15;
-}
-
-/* Move white circle LEFT */
-body.dark .theme-toggle::after {
-  transform: translateX(-28px);
-}
-
 /* =========================
    RESPONSIVE — TABLET
 ========================= */
@@ -1097,48 +1082,59 @@ body.dark .theme-toggle::after {
   width: 58px;
   height: 30px;
   padding: 0;
-  border: 0;
+  border: none;
   border-radius: 30px;
   background: #cbd5e1;
   position: relative;
   cursor: pointer;
-  transition: background 0.3s ease;
   flex-shrink: 0;
+  transition: background 0.3s ease;
 }
 
-/* Moon / Sun icon on the LEFT */
-.theme-toggle::before {
-  content: "☾";
+/* White circular knob */
+.theme-toggle::after {
+  content: "☀";
   position: absolute;
-  left: -27px;
-  top: 2px;
+
   width: 24px;
-  height: 26px;
+  height: 24px;
+
+  top: 3px;
+  left: 3px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 21px;
-  line-height: 1;
-  color: #64748b;
-}
-
-/* White switch circle */
-.theme-toggle::after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 3px;
-  right: 3px;
-
   border-radius: 50%;
   background: #ffffff;
+
+  color: #facc15;
+  font-size: 16px;
+  line-height: 1;
 
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 
   transition:
     transform 0.3s ease,
-    background 0.3s ease;
+    color 0.3s ease;
+}
+
+/* Remove the old outside icon */
+.theme-toggle::before {
+  display: none;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark .theme-toggle {
+  background: #334155;
+}
+
+body.dark .theme-toggle::after {
+  content: "☾";
+  transform: translateX(28px);
+  color: #64748b;
 }
