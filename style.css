@@ -45,7 +45,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 50;
-  height: 78px;
+  height: 82px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,7 +56,7 @@ button {
 }
 
 .brand img {
-  width: 180px;
+  width: 175px;
   height: auto;
   display: block;
 }
