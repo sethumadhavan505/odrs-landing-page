@@ -86,16 +86,12 @@ button {
 }
 
 .menu-toggle {
+  display: none;
   border: 0;
   background: transparent;
   cursor: pointer;
-}
-
-
-
-.menu-toggle {
-  display: none;
   font-size: 25px;
+  padding: 0;
 }
 
 /* =========================
@@ -960,9 +956,17 @@ body.dark .why {
   }
 
   .header-actions .btn {
-    display: none;
+    display: inline-flex;
+    padding: 9px 14px;
+    font-size: 13px;
   }
 
+  .theme-toggle {
+    display: block;
+    width: 58px;
+    height: 30px;
+  }
+  
   .hero {
     padding: 48px 5% 55px;
   }
