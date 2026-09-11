@@ -49,13 +49,44 @@ document.querySelectorAll('a[href="login.html"]').forEach(link => {
   link.target = '_self';
 });
 
-const savedTheme = localStorage.getItem('odrs-theme');
-if (savedTheme === 'dark') document.body.classList.add('dark');
+// ===== DARK MODE + HEADER LOGO =====
+const headerLogo = document.getElementById('headerLogo');
 
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  localStorage.setItem('odrs-theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-});
+function updateHeaderLogo() {
+  if (!headerLogo) return;
+
+  if (document.body.classList.contains('dark')) {
+    headerLogo.src = 'darkmodelogo.png';
+  } else {
+    headerLogo.src = 'logo.png';
+  }
+}
+
+// Restore saved theme
+const savedTheme = localStorage.getItem('odrs-theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark');
+}
+
+// Set correct logo when page loads
+updateHeaderLogo();
+
+// Change theme + logo when toggle is clicked
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    const isDark = document.body.classList.contains('dark');
+
+    localStorage.setItem(
+      'odrs-theme',
+      isDark ? 'dark' : 'light'
+    );
+
+    updateHeaderLogo();
+  });
+}
 
 menuToggle.addEventListener('click', () => {
   const open = nav.classList.toggle('mobile-open');
