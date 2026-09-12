@@ -1142,3 +1142,90 @@ body.dark .theme-toggle::after {
   transform: translateX(28px);
   color: #64748b;
 }
+/* =========================
+   DARK MODE TEXT FIX
+========================= */
+
+body.dark {
+  color: #ffffff;
+}
+
+/* Main hero text */
+body.dark .hero-copy h1 {
+  color: #ffffff;
+}
+
+body.dark .hero-copy h1 em {
+  color: #ff3b30;
+}
+
+body.dark .hero-copy p {
+  color: #b8c7d4;
+}
+
+/* Trust row */
+body.dark .trust-row strong {
+  color: #ffffff;
+}
+
+body.dark .trust-row span {
+  color: #9badba;
+}
+
+/* Hero card */
+body.dark .main-card h3 {
+  color: #ffffff;
+}
+
+body.dark .main-card h3 span {
+  color: #ff3b30;
+}
+
+body.dark .card-top span {
+  color: #9badba;
+}
+
+body.dark .progress-label {
+  color: #9badba;
+}
+
+body.dark .mini-services div {
+  color: #ffffff;
+}
+
+/* Floating cards */
+body.dark .floating-card b {
+  color: #06243a;
+}
+
+body.dark .floating-card span {
+  color: #687586;
+}
+
+/* CTA */
+body.dark .cta h2 {
+  color: #ffffff;
+}
+
+body.dark .cta p {
+  color: #b8c7d4;
+}
+
+/* Stats */
+body.dark .stats-strip strong {
+  color: #ffffff;
+}
+
+body.dark .stats-strip span {
+  color: #9badba;
+}
+
+/* Navigation */
+body.dark .desktop-nav a {
+  color: #c5d1da;
+}
+
+body.dark .desktop-nav a:hover,
+body.dark .desktop-nav a[aria-current="page"] {
+  color: #ff3b30 !important;
+}
