@@ -49,16 +49,22 @@ document.querySelectorAll('a[href="login.html"]').forEach(link => {
   link.target = '_self';
 });
 
-// ===== DARK MODE + HEADER LOGO =====
+// ===== DARK MODE + LOGOS =====
+
 const headerLogo = document.getElementById('headerLogo');
+const heroLogo = document.getElementById('heroLogo');
 
-function updateHeaderLogo() {
-  if (!headerLogo) return;
+function updateLogos() {
+  const isDark = document.body.classList.contains('dark');
 
-  if (document.body.classList.contains('dark')) {
-    headerLogo.src = 'darkmodelogo.png';
-  } else {
-    headerLogo.src = 'logo.png';
+  // Header logo
+  if (headerLogo) {
+    headerLogo.src = isDark ? 'darkmodelogo.png' : 'logo.png';
+  }
+
+  // ODRS SERVICE HUB logo
+  if (heroLogo) {
+    heroLogo.src = isDark ? 'darkmodelogo.png' : 'logo.png';
   }
 }
 
@@ -69,12 +75,13 @@ if (savedTheme === 'dark') {
   document.body.classList.add('dark');
 }
 
-// Set correct logo when page loads
-updateHeaderLogo();
+// Set correct logos when page loads
+updateLogos();
 
-// Change theme + logo when toggle is clicked
+// Change theme + logos
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
+
     document.body.classList.toggle('dark');
 
     const isDark = document.body.classList.contains('dark');
@@ -84,7 +91,7 @@ if (themeToggle) {
       isDark ? 'dark' : 'light'
     );
 
-    updateHeaderLogo();
+    updateLogos();
   });
 }
 
