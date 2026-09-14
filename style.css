@@ -1300,3 +1300,50 @@ body.dark .why-copy h2 {
 body.dark .why-copy h2 em {
   color: #ff3b30 !important;
 }
+
+
+/* =========================
+   FINAL DARK MODE FIXES
+========================= */
+
+/* Red section labels */
+body.dark .cta .eyebrow,
+body.dark .cta .eyebrow span,
+body.dark .section .eyebrow,
+body.dark .why .eyebrow {
+  color: #ff3b30 !important;
+}
+
+body.dark .cta .eyebrow span,
+body.dark .section .eyebrow span,
+body.dark .why .eyebrow span {
+  background: #ff3b30 !important;
+}
+
+/* Benefit numbers */
+.benefit > span {
+  font-size: 16px !important;
+  font-weight: 800;
+  color: #ff3b30 !important;
+  padding-top: 4px;
+  min-width: 26px;
+}
+
+/* Benefit titles */
+body.dark .benefit strong {
+  color: #ffffff !important;
+}
+
+/* Benefit descriptions */
+body.dark .benefit p {
+  color: #b8c7d4 !important;
+}
+
+/* Support heading */
+body.dark .why-copy h2 {
+  color: #ffffff !important;
+}
+
+body.dark .why-copy h2 em {
+  color: #ff3b30 !important;
+}
