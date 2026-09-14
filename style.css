@@ -1230,3 +1230,47 @@ body.dark .desktop-nav a:hover,
 body.dark .desktop-nav a[aria-current="page"] {
   color: #ff3b30 !important;
 }
+
+/* =========================
+   DARK MODE - TEXT VISIBILITY FIX
+========================= */
+
+/* Section main heading */
+body.dark .section-heading h2 {
+  color: #ffffff !important;
+}
+
+body.dark .section-heading h2 em {
+  color: #ff3b30 !important;
+}
+
+/* Section description */
+body.dark .section-heading > p {
+  color: #b8c7d4 !important;
+}
+
+/* ALL SERVICE CARD HEADINGS */
+body.dark .service-card h3 {
+  color: #ffffff !important;
+}
+
+/* ALL SERVICE CARD DESCRIPTIONS */
+body.dark .service-card p {
+  color: #b8c7d4 !important;
+}
+
+/* Service numbers */
+body.dark .service-card .service-no {
+  color: #9badba !important;
+}
+
+/* Request service links */
+body.dark .service-card a {
+  color: #ff3b30 !important;
+}
+
+/* Service icons/numbers remain visible */
+body.dark .service-icon {
+  color: #ff3b30 !important;
+}
+
