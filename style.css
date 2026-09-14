@@ -1274,3 +1274,29 @@ body.dark .service-icon {
   color: #ff3b30 !important;
 }
 
+/* =========================
+   FINAL WHY SECTION FIX
+========================= */
+
+/* Benefit numbers */
+.benefit > span {
+  font-size: 16px !important;
+  font-weight: 800;
+  color: var(--red) !important;
+  padding-top: 4px;
+  min-width: 26px;
+}
+
+/* Dark mode benefit numbers */
+body.dark .benefit > span {
+  color: #ff3b30 !important;
+}
+
+/* Dark mode - "Support that keeps things" */
+body.dark .why-copy h2 {
+  color: #ffffff !important;
+}
+
+body.dark .why-copy h2 em {
+  color: #ff3b30 !important;
+}
